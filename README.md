@@ -54,7 +54,7 @@ The `.env` file contains various configurable settings. Below is an explanation 
 After configuring the `.env` file, run the following command:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This command will start N8N in detached mode (background).
@@ -100,20 +100,23 @@ If you experience file permission issues, ensure that the Docker user has access
 
 To update your N8N installation to the latest version, follow these steps:
 
-1. Pull the latest image:
-   ```bash
-   docker-compose pull
-   ```
+Pull the latest image:
 
-2. Stop the running containers:
-   ```bash
-   docker-compose down
-   ```
+```bash
+docker compose pull
+```
 
-3. Start the containers with the updated image:
-   ```bash
-   docker-compose up -d
-   ```
+Stop the running containers:
+
+```bash
+docker compose down
+```
+
+Start the containers with the updated image:
+
+```bash
+docker compose up -d
+```
 
 ## License
 
