@@ -96,6 +96,25 @@ Make sure the port you specify in `N8N_PORT` is not being used by other applicat
 
 If you experience file permission issues, ensure that the Docker user has access to the data folder specified in `DATA_FOLDER`.
 
+## Updating N8N
+
+To update your N8N installation to the latest version, follow these steps:
+
+1. Pull the latest image:
+   ```bash
+   docker-compose pull
+   ```
+
+2. Stop the running containers:
+   ```bash
+   docker-compose down
+   ```
+
+3. Start the containers with the updated image:
+   ```bash
+   docker-compose up -d
+   ```
+
 ## License
 
 See the official n8n documentation for more information about licensing and usage.
