@@ -25,3 +25,19 @@ services:
     volumes:
       - ${DATA_FOLDER}:/home/node/.n8n
       - ./local-files:/files
+    networks:
+      - automation-network
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: always
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARED_TOKEN}
+    networks:
+      - automation-network
+
+networks:
+  automation-network:
+    driver: bridge
